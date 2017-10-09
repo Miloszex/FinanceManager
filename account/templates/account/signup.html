@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block pageContent %}
+<div class="row">
+    <!-- side image -->
+    <div class="col-lg-3 side-image">
+        <div>
+            <p class="landing-motto">Will You accept this challange?</p>
+        </div>
+    </div>
+    <!-- login form -->
+    <div class="col-lg-offset-1 col-lg-6 fixed-position">
+        <div class="login-logo">Signup</div>
+        <div class="spacer-small"></div>
+            <div class="spacer-small"></div>
+            <form class="form-horizontal" method="POST" action="{% url 'signup' %}">
+                {% csrf_token %}
+                    <div class="form-group">
+                        <label for="email" class="col-md-4 control-label">{{form.username.label_tag}}</label>
+
+                        <div class="col-md-6">
+                            <input id="email" placeholder="Username" type="text" class="form-control input-decorator" name="username" required autofocus>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-md-4 control-label">{{form.first_name.label_tag}}</label>
+
+                        <div class="col-md-6">
+                            <input id="email" placeholder="First name" type="text" class="form-control input-decorator" name="first_name" required autofocus>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-md-4 control-label">{{form.last_name.label_tag}}</label>
+
+                        <div class="col-md-6">
+                            <input id="email" placeholder="Last name" type="text" class="form-control input-decorator" name="last_name" required autofocus>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-md-4 control-label">{{form.password.label_tag}}</label>
+
+                        <div class="col-md-6">
+                            <input id="email" placeholder="Password" type="password" class="form-control input-decorator" name="password" required autofocus>
+                        </div>
+                    </div>
+
+                    <div class="spacer-small" ></div>
+                    <div class="form-group">
+                        <div class="col-md-8 col-md-offset-5">
+                            <button type="submit" class="btn login-button">
+                                Login
+                            </button>
+                            <span class="ornament">or</span>
+                            <a class="switch-sign-method" href={% url 'signin' %} > Signin</a>
+                        </div>
+                    </div>
+                </form>
+    </div>
+</div>
+{% endblock %}
+
