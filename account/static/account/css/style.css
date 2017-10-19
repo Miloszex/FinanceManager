@@ -1,4 +1,4 @@
-
+/* Menu */
 .menu{
     height: 100%; /* 100% Full-height */
     width: 20%; /* 0 width - change this with JavaScript */
@@ -10,6 +10,12 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.menu-arrow{
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
 }
 
 .menu-elements a {
@@ -24,4 +30,21 @@
 
 .menu-elements a:hover{
     color: white;
+}
+
+.menu-logo{
+    font-size: 30px;
+    color: gold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Others */
+.space-line{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
