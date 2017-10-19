@@ -33,7 +33,7 @@ def signin(request):
 
             if user and user.is_active:
                 login(request, user)
-                return render(request, 'account/signin_success.html')
+                return redirect('board_index')
             else:
                 pass
         else:
