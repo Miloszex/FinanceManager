@@ -16,6 +16,8 @@ from django.conf.urls import include, url
 from . import views
 
 urlpatterns = [
+    url(r'^add_partner/' , views.add_partner, name='add_partner'),
     url(r'^', views.index ,  name='board_index' ),
-    
+
+
 ]

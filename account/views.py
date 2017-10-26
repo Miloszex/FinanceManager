@@ -16,7 +16,7 @@ def signup(request):
             user.save()
             user = authenticate(username=request.POST['username'], password=request.POST['password'])
             login(request, user)
-            return render(request, 'account/signup_success.html')
+            return redirect('board_index')
         else:
             form = LoginForm()
     return render(request, 'account/signup.html', {'form': form})
